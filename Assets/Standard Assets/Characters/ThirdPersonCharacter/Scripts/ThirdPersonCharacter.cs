@@ -29,8 +29,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+        private float m_lastPowerUpM;
+        public void SetJumpHeight(float jumpHeigh)
+        {
+            m_lastPowerUpM = this.m_JumpPower;
+            this.m_JumpPower = jumpHeigh;
+        }
 
-		void Start()
+        public void RestoreJumpHeight()
+        {
+            m_JumpPower = m_lastPowerUpM;
+        }
+
+        void Start()
 		{
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();

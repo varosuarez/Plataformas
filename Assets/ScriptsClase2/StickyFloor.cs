@@ -24,6 +24,7 @@ public class StickyFloor : MonoBehaviour {
             at.IsAttached = true;
         }
 
+
     }
 
     void OnTriggerExit(Collider other)

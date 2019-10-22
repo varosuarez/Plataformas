@@ -41,6 +41,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_JumpPower = m_lastPowerUpM;
         }
 
+        public void SetIsGrounded()
+        {
+            m_IsGrounded = false;
+            m_GroundNormal = Vector3.up;
+            m_Animator.applyRootMotion = false;
+        }
+
         void Start()
 		{
 			m_Animator = GetComponent<Animator>();
@@ -68,9 +75,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_ForwardAmount = move.z;
 
 			ApplyExtraTurnRotation();
-
-			// control and velocity handling is different when grounded and airborne:
-			if (m_IsGrounded)
+            if (m_IsGrounded)
 			{
 				HandleGroundedMovement(crouch, jump);
 			}

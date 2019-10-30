@@ -157,16 +157,16 @@ public class GameManager : MonoBehaviour
 		m_Player.transform.position = m_CurrentSpawnPoint.position;
 	}
 
-	/// <summary>
-	/// Esta función activa/desactiva una puerta con un tipo dado
-	/// </summary>
-	/// <param name="doorColor">
-	/// Color de la puerta que se quiere desactivar <see cref="DoorColor"/>
-	/// </param>
-	/// <param name="value">
-	/// True, activa la puerta, false la desactiva <see cref="System.Boolean"/>
-	/// </param>
-	public void ActivateDoor(DoorColor doorColor, bool value)
+    /// <summary>
+    /// Esta función activa/desactiva una puerta con un tipo dado
+    /// </summary>
+    /// <param name="doorColor">
+    /// Color de la puerta que se quiere desactivar <see cref="DoorColor"/>
+    /// </param>
+    /// <param name="value">
+    /// True, activa la puerta, false la desactiva <see cref="System.Boolean"/>
+    /// </param>
+    public void ActivateDoor(DoorColor doorColor, bool value)
 	{
 		// Si la puerta existe, la intentamos activar
 		if (m_Doors.ContainsKey(doorColor))

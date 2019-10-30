@@ -5,11 +5,11 @@ public class DeathScript: MonoBehaviour{
 	/// El jugador
 	/// </summary>
 	public GameObject m_Player = null;
-	
-	/// <summary>
-	/// Game Manager para hacer respawn del jugador
-	/// </summary>
-	private GameObject m_GameManager = null;
+
+    /// <summary>
+    /// Game Manager para hacer respawn del jugador
+    /// </summary>
+    private GameObject m_GameManager = null;
 	
 	/// <summary>
 	/// En la función Start hacemos una búsqueda del GameManager
@@ -33,6 +33,11 @@ public class DeathScript: MonoBehaviour{
         {
             // TODO 3 - Enviamos un mensaje al GameManager llamando a la función "RespawnPlayer"
             m_GameManager.SendMessage("RespawnPlayer");
+        }
+        if (other.tag == "Enemy")
+        {
+            //Matamos enemigo
+            Destroy(other.gameObject);
         }
 
 

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/yellow_world.unity
     guid: a4617eec9f178d74f95ea1d3a30e94b3
+  - enabled: 1
+    path: Assets/Scenes/victory_screen.unity
+    guid: 2eef5fc777630e54a8041946e97b3443
   m_configObjects: {}

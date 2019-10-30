@@ -15,10 +15,11 @@ public class ChomperAnimation : MonoBehaviour
         m_Animator = GetComponent<Animator>();
     }
 
-    public void Attack()
+    public IEnumerator Attack()
     {
-        //#TO-DO 2: lanzar el trigger Attack.
+        //#TO-DO 2: lanzar el trigger Attack.       
         m_Animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(1f);
     }
 
     public void Updatefordward(float ford)
@@ -27,5 +28,4 @@ public class ChomperAnimation : MonoBehaviour
         m_Animator.SetFloat("Forward", ford);
     }
     // Update is called once per frame
-
 }
